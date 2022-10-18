@@ -1,0 +1,29 @@
+<script>
+    /*
+    PROBLEMA: Lista de Alunos
+    Peça para o Professor informar a quantidade de alunos que possui.
+    Após, usando a estrutura de repetição "for com variável de controle", peça para o Professor informar o nome dos alunos e também informar se é menino ou menina.
+    Separe-os em duas listas e apresente o nome dos meninos ordenados alfabeticamente, que estarão em uma lista, e o nome das meninas também ordenados alfabeticamente, que estarão em outra lista.
+    */
+
+    //ENTRADA
+const numeroAlunos = parseInt(prompt("Informe a quantidade de alunos que possui"));
+let meninos = [];
+let meninas = [];
+
+    //PROCESSAMENTO
+for (let contador = 0; contador < numeroAlunos; contador++) {
+    let nomeAluno = prompt("Informe o nome do aluno");
+    let genero = prompt(`Informe se ${nomeAluno} é menina ou menino. Menina: A, Menino: O`);
+    if (genero === "A") {
+        meninas.push(nomeAluno);
+    }
+    else {
+        meninos.push(nomeAluno);
+    }
+}
+
+    //SAÍDA
+document.write(`Meninas: ${meninas.sort().join(", ")} <br> Meninos: ${meninos.sort().join(", ")}`);
+    
+</script>
