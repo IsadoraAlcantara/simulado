@@ -13,12 +13,15 @@
     let soma = 0;
 
     //PROCESSAMENTO
-for(preço of precoKgArroz){
-    soma = preço
-    resultado = preço / 7
+for(let preço of precoKgArroz){
+    soma = soma + preço
+    resultado = soma / precoKgArroz.length;
 }
+const media = soma / precoKgArroz.length;
+const maior = precoKgArroz.sort((a,b) => b-a)[0];
+const menor = precoKgArroz.sort((a,b) => a-b)[0];
 
     //SAÍDA
-document.write(soma);
+document.write(`Média: ${resultado} <br> Maior preço: ${maior} <br> Menor preço: ${menor}`);
 
 </script>
