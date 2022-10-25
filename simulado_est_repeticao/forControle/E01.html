@@ -14,7 +14,7 @@ let meninas = [];
     //PROCESSAMENTO
 for (let contador = 0; contador < numeroAlunos; contador++) {
     let nomeAluno = prompt("Informe o nome do aluno");
-    let genero = prompt(`Informe se ${nomeAluno} é menina ou menino. Menina: A, Menino: O`);
+    let genero = prompt(`Informe se ${nomeAluno} é menina ou menino. Menina: A, Menino: O`).toUpperCase();
     if (genero === "A") {
         meninas.push(nomeAluno);
     }

@@ -11,16 +11,17 @@
     */
 
     //ENTRADA
-const valorInicial = Number(prompt("Digite o valor inicial investido"));
-const valorDuplicado = valorInicial * 2;
-let meses = 0;
+    let valorInicial = Number(prompt("Digite o valor inicial investido"));
+    let valorDuplicado = valorInicial * 2;
+
 
     //PROCESSAMENTO
-for (let contador = 0; contador < valorDuplicado; contador++) {
-    meses = valorDuplicado / 0.05 ;
-}
+    let meses = 0;
+    for (meses = 0; valorInicial <= valorDuplicado; meses++) {
+        valorInicial = valorInicial * 1.005;
+    }
 
     //SAÍDA
-document.write(`Valor inicial: ${valorInicial} <br> Quantidade de meses necessário para ser duplicado: ${meses}`);
-
+    document.write(`Valor inicial: R$:${(valorDuplicado / 2).toFixed(2)} <br>`); 
+    document.write(`Quantidade de meses necessário para ser duplicado: ${meses}`);
 </script>

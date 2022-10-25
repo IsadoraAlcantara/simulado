@@ -14,15 +14,17 @@
     //ENTRADA
 const vezesAbasteceu = parseInt(prompt("Informe a quantidade de vezes que você abasteceu"));
 const distanciaTotal = parseInt(prompt("Informe a distancia total percorrida (em quilômetros)"));
-let custoKmPercorrido
+let custoTotal = 0;
+let custo = 0;
 
     //PROCESSAMENTO
 for (let contador = 0; contador < vezesAbasteceu; contador++) {
-    let custoAbastecimento = prompt("Informe o custo de cada abastecimento efetuado");
-    custoKmPercorrido = custoAbastecimento / distanciaTotal;
+    custo = Number(prompt("Informe o custo de cada abastecimento efetuado"));
+    custoTotal = custoTotal + vezesAbasteceu;
 }
+let custoKmPercorrido = custoTotal / vezesAbasteceu;
 
     //SAÍDA
-document.write(`Custo de cada quilômetro percorrido ${custoKmPercorrido} <br> `)
+document.write(`Custo de cada quilômetro percorrido ${custo} <br> Custo total de abastecimentos: R$:${custoTotal.toFixed(2)} <br> A quilometros percorridos ${distanciaTotal}`);
 
 </script>
